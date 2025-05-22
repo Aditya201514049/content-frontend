@@ -1,12 +1,10 @@
 // Configuration settings for the application
 const config = {
-  // API URL based on environment - using proxy for development
-  API_URL: process.env.NODE_ENV === 'production' 
-    ? 'https://contentguardian-nyfj.onrender.com/api' 
-    : '/api', // This will use the proxy in vite.config.js
+  // API URL based on environment
+  API_URL: import.meta.env.VITE_API_URL || '/api',
     
-  // Direct backend URL for debugging
-  DIRECT_API_URL: 'https://contentguardian-nyfj.onrender.com/api',
+  // Direct backend URL for Railway
+  DIRECT_API_URL: import.meta.env.VITE_DIRECT_API_URL || 'https://content-backend-production-163e.up.railway.app/api',
     
   // Other configuration settings
   APP_NAME: 'ContentGuardian',
