@@ -3,6 +3,10 @@
     { 
       "source": "/api/:path*",
       "destination": "https://content-backend-production-163e.up.railway.app/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
